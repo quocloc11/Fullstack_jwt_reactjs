@@ -1,6 +1,7 @@
 import './Register.scss'
 import { useHistory } from 'react-router-dom'
-
+import axios from 'axios'
+import { useEffect } from 'react';
 const Register = (props)=>{
     let history = useHistory();
     const handleLogin=()=>{
@@ -8,6 +9,11 @@ const Register = (props)=>{
        
         
     }
+    useEffect(()=>{
+        axios.get('https://reqres.in/api/users?page=2').then(data=>{
+            console.log('axios',data)
+        })
+    },[])
     return (
          <div className="register-container">
             <div className="container">
