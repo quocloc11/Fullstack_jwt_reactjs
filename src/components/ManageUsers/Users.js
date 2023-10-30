@@ -1,6 +1,6 @@
 import { useHistory } from 'react-router-dom'
 import { useEffect } from 'react';
-
+import './Users.scss'
 const Users=(props)=>{
     let history=useHistory()
     useEffect(()=>{
